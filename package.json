@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@chat-adapter/state-memory": "~4.27.0",
+    "@chat-adapter/state-redis": "^4.27.0",
     "ai": "^6.0.175",
     "chat": "^4.27.0",
     "chat-adapter-sendblue": "^0.2.0",
