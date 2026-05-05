@@ -1,50 +1,49 @@
 {
-  "name": "default-repository",
+  "name": "nitro-imessage-agent",
   "private": true,
   "type": "module",
-  "description": "default repository for HugoRCD",
+  "description": "A simple iMessage agent built with Nitro, Chat SDK and the Vercel AI SDK",
   "author": "HugoRCD",
   "funding": "https://github.com/sponsors/HugoRCD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HugoRCD/default-repository.git"
+    "url": "git+https://github.com/HugoRCD/nitro-imessage-agent.git"
   },
   "bugs": {
-    "url": "https://github.com/HugoRCD/default-repository/issues"
+    "url": "https://github.com/HugoRCD/nitro-imessage-agent/issues"
+  },
+  "imports": {
+    "#*": "./*"
   },
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "build": "nitro build",
+    "dev": "nitro dev",
+    "preview": "nitro preview",
+    "prepare": "nitro prepare",
     "automd": "automd",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "workflow:web": "npx workflow web"
   },
   "dependencies": {
-    "@nuxt/image": "2.0.0",
-    "@nuxt/scripts": "0.13.4",
-    "@nuxt/ui": "^4.7.0",
-    "@unhead/vue": "^2.1.13",
-    "@vueuse/core": "^14.2.1",
-    "@vueuse/nuxt": "14.2.1",
-    "motion-v": "^1.10.3",
-    "nuxt": "^4.4.2",
-    "vue": "latest"
+    "@chat-adapter/state-memory": "~4.27.0",
+    "@workflow/ai": "^4.1.2",
+    "ai": "^6.0.175",
+    "chat": "~4.27.0",
+    "chat-adapter-sendblue": "^0.2.0",
+    "workflow": "^4.2.4",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@hrcd/eslint-config": "^3.0.3",
     "@shelve/cli": "^4.2.0",
     "automd": "^0.4.3",
     "eslint": "^9.39.4",
+    "nitro": "latest",
     "typescript": "^5.9.3",
     "vitest": "^4.1.5"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "packageManager": "pnpm@10.33.2"
 }
